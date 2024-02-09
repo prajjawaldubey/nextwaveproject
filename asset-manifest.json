@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nextwaveproject/static/css/main.e0006b60.css",
-    "main.js": "/nextwaveproject/static/js/main.a848d60e.js",
+    "main.js": "/nextwaveproject/static/js/main.d94b2549.js",
     "static/js/592.80520ca2.chunk.js": "/nextwaveproject/static/js/592.80520ca2.chunk.js",
     "index.html": "/nextwaveproject/index.html",
     "main.e0006b60.css.map": "/nextwaveproject/static/css/main.e0006b60.css.map",
-    "main.a848d60e.js.map": "/nextwaveproject/static/js/main.a848d60e.js.map",
+    "main.d94b2549.js.map": "/nextwaveproject/static/js/main.d94b2549.js.map",
     "592.80520ca2.chunk.js.map": "/nextwaveproject/static/js/592.80520ca2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e0006b60.css",
-    "static/js/main.a848d60e.js"
+    "static/js/main.d94b2549.js"
   ]
 }
