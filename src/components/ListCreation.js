@@ -6,7 +6,6 @@ import "../styles/styles.css";
 const ListCreation = ({ lists, checkedId, setCheckedId }) => {
   const [errorMessage, setErrorMessage] = useState(false);
   const handleCheckboxChange = (id, isChecked) => {
-    console.log("bio", isChecked);
     if (isChecked && !checkedId.includes(id)) {
       // If checkbox is checked, add ID to the state
       setCheckedId([...checkedId, id]);
@@ -14,10 +13,9 @@ const ListCreation = ({ lists, checkedId, setCheckedId }) => {
       // If checkbox is unchecked, remove ID from the state
       setCheckedId(checkedId.filter((checkedId) => checkedId !== id));
     }
-    console.log("bio", checkedId, id);
   };
   const handleClick = (event) => {
-    // Perform validation logic here
+  
     const check = "here";
     if (checkedId.length == 2) {
       setErrorMessage(false);
@@ -44,7 +42,7 @@ const ListCreation = ({ lists, checkedId, setCheckedId }) => {
           style={{ color: "red", minHeight: "30px" }}
         >
           {errorMessage
-            ? "You should select exactly two lists to continue."
+            ? "You should select exactly two lists to make a new list."
             : ""}
         </div>
       </div>

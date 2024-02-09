@@ -17,7 +17,6 @@ const AddList = ({
   const [listonee, setListone] = useState(listone);
   const [listtwoo, setListtwo] = useState(listtwo);
   const maxValue = Math.max(...checkedId) + 1;
-  console.log("listc", maxValue, checkedId);
   const handleUpdate = (event) => {
     if (newList.length > 0) {
       addlist([...listData, newList]);

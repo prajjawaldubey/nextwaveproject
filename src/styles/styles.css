@@ -11,8 +11,8 @@
   flex-direction: column;
   width: 18vw;
   padding: 12px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  max-height: 450px; /* Set maximum height for the container */
+  overflow-y: auto; 
+  max-height: 450px; 
   border-radius: 10px;
   margin-top: 40px;
   margin-right: 15px;
@@ -61,8 +61,8 @@
 }
 .header{
   margin-top: 20px; 
-  display: flex; /* Add flex display */
-  justify-content: center; /* Center content horizontally */
+  display: flex; 
+  justify-content: center; 
   align-items: center; 
 }
 
@@ -75,13 +75,13 @@
 }
 
 .arrow-button.left {
-  margin-right: auto; /* Push the left button to the left end */
+  margin-right: auto;
 }
 
 .arrow-button.right {
-  margin-left: auto; /* Push the right button to the right end */
+  margin-left: auto; 
 }
 .button-container {
   display: flex;
-  justify-content: space-between; /* Align buttons at the ends of the container */
+  justify-content: space-between; 
 }

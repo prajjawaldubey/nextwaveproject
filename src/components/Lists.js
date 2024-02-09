@@ -1,45 +1,42 @@
 import "../styles/styles.css";
 const Lists = (list) => {
-  console.log("mega", list.data);
   const handleRightButtonClick = (event) => {
     const { id } = event.target;
     if (list.vis != "") {
-      console.log("listc", list.data[id]);
       list.setNewList([...list.newList, list.data[id]]);
       list.setList(
         list.data.filter((item) => item.name !== list.data[id].name)
       );
     } else {
-        list.setListtwo([list.data[id],...list.listtwoo, ]);
-        list.setNewList(
-          list.data.filter((item) => item.name !== list.data[id].name)
-        );
-    }
-  };
-  const handleLeftButtonClick = (event) => {
-    const { id } = event.target;
-    if (list.vis != "") {
-      console.log("listc", list.data[id]);
-      list.setNewList([...list.newList, list.data[id]]);
-      list.setList(
-        list.data.filter((item) => item.name !== list.data[id].name)
-      );
-    } else {
-      list.setListone([list.data[id], ...list.listonee ]);
+      list.setListtwo([list.data[id], ...list.listtwoo]);
       list.setNewList(
         list.data.filter((item) => item.name !== list.data[id].name)
       );
     }
   };
-  
+  const handleLeftButtonClick = (event) => {
+    const { id } = event.target;
+    if (list.vis != "") {
+      list.setNewList([...list.newList, list.data[id]]);
+      list.setList(
+        list.data.filter((item) => item.name !== list.data[id].name)
+      );
+    } else {
+      list.setListone([list.data[id], ...list.listonee]);
+      list.setNewList(
+        list.data.filter((item) => item.name !== list.data[id].name)
+      );
+    }
+  };
+
   const handleCheckbox = (event) => {
     const { id, checked } = event.target;
     list.onCheckboxChange(parseInt(id) - 1, checked);
   };
-  const length = list.data ? list.data.length :0;
-  const index = list.index && isFinite(list.index) ? list.index : 0
+  const length = list.data ? list.data.length : 0;
+  const index = list.index && isFinite(list.index) ? list.index : 0;
   return (
-    <div className="list-container">
+    <div className="list-container" >
       <div className="checkbox-container">
         <input type="checkbox" id={list.index} onChange={handleCheckbox} />
         <label htmlFor="list1" style={{ fontWeight: "bold" }}>
@@ -82,13 +79,9 @@ const Lists = (list) => {
                 🡲
               </button>
             </div>
-
-            {/* Add your list items here */}
           </div>
         );
       })}
-
-      {/* Add more list boxes as needed */}
     </div>
   );
 };

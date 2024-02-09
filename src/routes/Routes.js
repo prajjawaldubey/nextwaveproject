@@ -30,9 +30,7 @@ const RoutesComponent = () => {
         const jsonData = await response.json();
         const finalArray = arrangArray(jsonData.lists)
         setListData(finalArray)
-       // setData(jsonData);
       } catch (error) {
-       // setError(error);
       }
     };
 
