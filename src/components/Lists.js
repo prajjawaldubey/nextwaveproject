@@ -7,12 +7,12 @@ const Lists = (list) => {
       console.log("listc", list.data[id]);
       list.setNewList([...list.newList, list.data[id]]);
       list.setList(
-        list.data.filter((item) => item.title !== list.data[id].title)
+        list.data.filter((item) => item.name !== list.data[id].name)
       );
     } else {
         list.setListtwo([list.data[id],...list.listtwoo, ]);
         list.setNewList(
-          list.data.filter((item) => item.title !== list.data[id].title)
+          list.data.filter((item) => item.name !== list.data[id].name)
         );
     }
   };
@@ -22,36 +22,36 @@ const Lists = (list) => {
       console.log("listc", list.data[id]);
       list.setNewList([...list.newList, list.data[id]]);
       list.setList(
-        list.data.filter((item) => item.title !== list.data[id].title)
+        list.data.filter((item) => item.name !== list.data[id].name)
       );
     } else {
       list.setListone([list.data[id], ...list.listonee ]);
       list.setNewList(
-        list.data.filter((item) => item.title !== list.data[id].title)
+        list.data.filter((item) => item.name !== list.data[id].name)
       );
     }
   };
-
+  
   const handleCheckbox = (event) => {
     const { id, checked } = event.target;
-    console.log("bio", list);
-    console.log("bioli", event.target.id, event.target.checked);
     list.onCheckboxChange(parseInt(id) - 1, checked);
   };
+  const length = list.data ? list.data.length :0;
+  const index = list.index && isFinite(list.index) ? list.index : 0
   return (
     <div className="list-container">
       <div className="checkbox-container">
         <input type="checkbox" id={list.index} onChange={handleCheckbox} />
         <label htmlFor="list1" style={{ fontWeight: "bold" }}>
-          List {list.index} ({list.data.length})
+          List {index} ({length})
         </label>
       </div>
       {list.data?.map((val, index) => {
         return (
-          <div className="list-box">
+          <div className="list-box" id={val.id}>
             <div className="boxPadding">
-              <h4>{val.title}</h4>
-              <p>{val.des}</p>
+              <h4>{val.name}</h4>
+              <p>{val.description}</p>
             </div>
             <div className="button-container">
               {" "}

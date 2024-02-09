@@ -20,15 +20,15 @@ const ListCreation = ({ lists, checkedId, setCheckedId }) => {
     // Perform validation logic here
     const check = "here";
     if (checkedId.length == 2) {
-        setErrorMessage(false)
+      setErrorMessage(false);
     } else {
       event.preventDefault();
-      setErrorMessage(true)
+      setErrorMessage(true);
     }
   };
   return (
-    <div className="container">
-      <div className="header">
+    <div>
+      <div className="header container">
         <h1>List Creation</h1>
         <Link
           to={{
@@ -39,10 +39,16 @@ const ListCreation = ({ lists, checkedId, setCheckedId }) => {
             Create a new list
           </button>
         </Link>
+        <div
+          className="error-message"
+          style={{ color: "red", minHeight: "30px" }}
+        >
+          {errorMessage
+            ? "You should select exactly two lists to continue."
+            : ""}
+        </div>
       </div>
-      <div className="error-message" style={{ color: "red" ,minHeight: "30px"}}>
-        {errorMessage?"You should select exactly two lists to continue.":""}
-      </div>
+
       <div className="lists-container-parent">
         {lists.map((list, index) => {
           return (
