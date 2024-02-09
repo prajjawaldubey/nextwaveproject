@@ -38,7 +38,7 @@ const AddList = ({
           newList={newList}
           setList={setListone}
         />
-        ;
+        
         <Lists
           data={newList}
           index={maxValue + 1}
@@ -49,7 +49,7 @@ const AddList = ({
           setListtwo={setListtwo}
           setListone={setListone}
         />
-        ;
+        
         <Lists
           data={listtwoo}
           index={checkedId[1] + 1}
@@ -58,7 +58,7 @@ const AddList = ({
           newList={newList}
           setList={setListtwo}
         />
-        ;
+        
         
       </div>
       <div className="header">

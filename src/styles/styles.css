@@ -27,6 +27,8 @@
 }
 .boxPadding{
   padding: 4px 2px 1px 15px;
+  overflow: auto;
+  word-wrap: break-word; 
 }
 
 .lists-container-parent {
