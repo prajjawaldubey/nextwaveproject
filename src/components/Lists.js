@@ -43,7 +43,7 @@ const Lists = (list) => {
       <div className="checkbox-container">
         <input type="checkbox" id={list.index} onChange={handleCheckbox} />
         <label htmlFor="list1" style={{ fontWeight: "bold" }}>
-          List {list.index}
+          List {list.index} ({list.data.length})
         </label>
       </div>
       {list.data?.map((val, index) => {
