@@ -17,6 +17,9 @@ const AddList = ({listone , listtwo,addlist,checkedId,listData,setCheckedId}) =>
             setCheckedId([])
         }
     }
+    const handleCancel =()=>{
+      setCheckedId([])
+    }
 
 
   return (
@@ -29,10 +32,10 @@ const AddList = ({listone , listtwo,addlist,checkedId,listData,setCheckedId}) =>
     
       </div>
       <div className="header">
-      <Link to="/">
-          <button className="button-Style-cancel" >Cancel</button>
+      <Link to="/nextwaveproject">
+          <button className="button-Style-cancel" onClick={handleCancel}>Cancel</button>
         </Link>
-        <Link to="/">
+        <Link to="/nextwaveproject">
           <button className="button-Style" onClick={handleUpdate}>Update</button>
         </Link>
         

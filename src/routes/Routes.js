@@ -10,7 +10,7 @@ const RoutesComponent  = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ListCreation lists={listData} checkedId={checkedId} setCheckedId={setCheckedId} />} />
+        <Route path="/nextwaveproject" element={<ListCreation lists={listData} checkedId={checkedId} setCheckedId={setCheckedId} />} />
         <Route path="/addlist" element={<AddList listone={listData[checkedId[0]]} listtwo ={listData[checkedId[1]]} addlist={setListData} checkedId ={checkedId} listData={listData} setCheckedId={setCheckedId}/> } />
       </Routes>
     </BrowserRouter>
